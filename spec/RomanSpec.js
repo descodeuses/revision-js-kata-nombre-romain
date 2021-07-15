@@ -5,4 +5,7 @@ describe("Roman", function() {
   it("si le paramètre est I, la fonction renvoie 1 ", function() {
     expect(romanToNumber('I')).toEqual(1);
   });
+  it("si le paramètre est V, la fonction renvoie 5", function(){
+    expect(romanToNumber('V')).toEqual(5);
+  });
 });
