@@ -3,7 +3,10 @@ function romanToNumber(romanNumber) {
     return 1
   } else if (romanNumber == 'V') {
     return 5
-  } else {
+  } else if (romanNumber == null){
     return 0
+  }
+   else {
+    return -1
   }
 }

@@ -8,4 +8,7 @@ describe("Roman", function() {
   it("si le paramètre est V, la fonction renvoie 5", function(){
     expect(romanToNumber('V')).toEqual(5);
   });
+  it("si le paramètre est invalid, la fonction renvoie -1", function(){
+    expect(romanToNumber('invalid')).toEqual(-1);
+  });
 });
