@@ -1,3 +1,7 @@
-function romanToNumber() {
-  return 0
+function romanToNumber(romanNumber) {
+  if(romanNumber == 'I') {
+    return 1
+  } else {
+    return 0
+  }
 }
