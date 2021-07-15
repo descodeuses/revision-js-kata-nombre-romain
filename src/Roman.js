@@ -1,14 +1,18 @@
+const dico = {
+    'I' : 1,
+    'V' : 5,
+    'X' : 10
+}
+
 function romanToNumber(romanNumber) {
-  if(romanNumber == 'I') {
-    return 1
-  } else if (romanNumber == 'V') {
-    return 5
-  } else if (romanNumber == 'X') {
-    return 10
-  } else if (romanNumber == null){
-    return 0
-  }
-  else {
-    return -1
-  }
+
+    if (romanNumber == null){
+        return 0
+    }
+    if (!Object.keys(dico).includes(romanNumber)) {
+        return -1
+    } 
+
+    return dico[romanNumber]
+    
 }
