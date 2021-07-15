@@ -11,4 +11,7 @@ describe("Roman", function() {
   it("si le paramètre est invalid, la fonction renvoie -1", function(){
     expect(romanToNumber('invalid')).toEqual(-1);
   });
+  it("si le paramètre est X, la fonction renvoie 10", function(){
+    expect(romanToNumber('X')).toEqual(10);
+  });
 });
