@@ -21,12 +21,35 @@ function romanToNumber(romanNumber) {
 }
 
 function isARomanNumber(romanNumber) {
-  
+  return !(romanNumber.split("").map(function(romanLetter){return isARomanLetter(romanLetter)}).includes(false))
+/*
+ |--|--------------------|--------------------------------------------------------------|---------------|
+  4.          1.                                    2.                                          3.
+
+  1. "IU" => ["I", "U"]
+  2. ["I", "U"] => [true, false]
+  3. [true, false] => true (contient au moins une lettre non romaine)
+  4. true => false (s'il y a au moins une lettre non romaine dans la liste, alors ce n'est pas un nombre romain)
+*/
+}
+
+function isARomanLetter(romanLetter) {
+  return romanNumberLetters.includes(romanLetter)
+}
+
+
+function isARomanNumber_autre_facon_de_faire(romanNumber) {
   for(let letter of romanNumber) {
-    if(!romanNumberLetters.includes(letter)){
+    // 1. "IU" => ["I", "U"]
+    if( ! romanNumberLetters.includes(letter)){
+      // 2. "I" => true
+      //    "U" => false
+      // 3. true => false, false => true
       return false
+      // 4. return false si au moins une lettre n'est pas romaine
     }
   }
-  
+
   return true
+  // 4. return true si toutes les lettres sont romaine
 }
