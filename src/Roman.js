@@ -10,14 +10,14 @@ const romanNumerals = {
 const romanNumberLetters = Object.keys(romanNumerals);
 
 function romanToNumber(romanNumber) {
-  
-  if (romanNumber == null){
-    return 0
+  if (romanNumber == null){ return 0 }
+  if (!isARomanNumber(romanNumber)) { return -1 }
+
+  let number = 0
+  for(let romanLetter of romanNumber) {
+    number += romanNumerals[romanLetter]
   }
-  if (!isARomanNumber(romanNumber)) {
-    return -1
-  }
-  return romanNumerals[romanNumber]
+  return number
 }
 
 function isARomanNumber(romanNumber) {

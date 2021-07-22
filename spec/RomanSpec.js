@@ -21,17 +21,15 @@ describe("Roman", function() {
     // PENDING : spec permettant d'explorer le reste à faire pour que ce programme fonctionne
     it("si le paramètre est II, la fonction renvoie 2", function(){
       expect(romanToNumber('II')).toEqual(2);
-      pending()
     });
 
     it("si le paramètre est VI, la fonction renvoie 6", function(){
       expect(romanToNumber('VI')).toEqual(6);
-      pending();
     });
 
     it("si le paramètre est IV, la fonction renvoie 4", function(){
       expect(romanToNumber('IV')).toEqual(4);
-      pending();
+      pending()
     });
 
   });
