@@ -9,13 +9,24 @@ const romanNumerals = {
 }
 
 function romanToNumber(romanNumber) {
-  
+
   if (romanNumber == null){
     return 0
   }
-  if (!Object.keys(romanNumerals).includes(romanNumber)) {
+  if (!isARomanNumer(romanNumber)) {
     return -1
-  } 
-
+  }
   return romanNumerals[romanNumber]
+}
+
+function isARomanNumer(romanNumber) {
+  let romanNumberLetters = Object.keys(romanNumerals);
+
+  for(let letter of romanNumber) {
+    if(!romanNumberLetters.includes(letter)){
+      return false
+    }
+  }
+
+  return true
 }
